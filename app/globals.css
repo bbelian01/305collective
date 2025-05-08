@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 24 95% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 95% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 95% 20%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 24 30% 96%;
+    --muted-foreground: 24 95% 40%;
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 30% 90%;
+    --input: 24 30% 90%;
+    --ring: 24 100% 50%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 24 95% 5%;
+    --foreground: 0 0% 100%;
+    --card: 24 95% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 24 95% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 24 30% 15%;
+    --muted-foreground: 24 30% 80%;
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 30% 20%;
+    --input: 24 30% 20%;
+    --ring: 24 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-open-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-inter);
+    @apply font-bold;
+  }
+}
+
+/* Refined card styles */
+.service-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 relative overflow-hidden;
+}
+
+.service-card::before {
+  content: '';
+  @apply absolute inset-0 bg-orange-500/5 opacity-0 transition-opacity duration-300;
+}
+
+.service-card:hover::before {
+  @apply opacity-100;
+}
+
+.team-card {
+  @apply transition-all duration-300 hover:shadow-lg relative overflow-hidden;
+}
+
+.team-card::before {
+  content: '';
+  @apply absolute inset-0 bg-green-500/5 opacity-0 transition-opacity duration-300;
+}
+
+.team-card:hover::before {
+  @apply opacity-100;
+}
+
+.process-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 relative overflow-hidden;
+}
+
+.process-card::before {
+  content: '';
+  @apply absolute inset-0 bg-orange-500/5 opacity-0 transition-opacity duration-300;
+}
+
+.process-card:hover::before {
+  @apply opacity-100;
+}
+
+/* Subtle color accents */
+.section-header {
+  @apply relative pb-4 mb-8;
+}
+
+.section-header::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-24 h-1 bg-orange-500;
+}
+
+.section-header.green::after {
+  @apply bg-green-500;
+}
+
+/* Refined interactive elements */
+.interactive-link {
+  @apply relative text-foreground no-underline transition-colors duration-300;
+}
+
+.interactive-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300;
+}
+
+.interactive-link:hover::after {
+  @apply w-full;
+}
+
+.interactive-link.green::after {
+  @apply bg-green-500;
+}
+
+/* Subtle background patterns */
+.bg-pattern {
+  @apply relative;
+}
+
+.bg-pattern::before {
+  content: '';
+  @apply absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_1px_1px,_var(--tw-gradient-stops))] from-orange-500 to-transparent bg-[length:20px_20px];
+}
+
+/* Accent elements */
+.accent-box {
+  @apply relative p-6 rounded-lg;
+}
+
+.accent-box::before {
+  content: '';
+  @apply absolute inset-0 rounded-lg bg-orange-500/5 -z-10;
+}
+
+.accent-box.green::before {
+  @apply bg-green-500/5;
+}
+
+/* List styles */
+.colored-list {
+  @apply space-y-2;
+}
+
+.colored-list li {
+  @apply flex items-center gap-2;
+}
+
+.colored-list li::before {
+  content: '';
+  @apply w-1.5 h-1.5 rounded-full bg-orange-500;
+}
+
+.colored-list.green li::before {
+  @apply bg-green-500;
+}
+
+/* Colorful elements */
+.colored-section {
+  @apply bg-orange-500/5;
+}
+
+.colored-border {
+  @apply border-2 border-orange-500;
+}
+
+.colored-text {
+  @apply text-orange-500;
+}
+
+.green-accent {
+  @apply text-green-500;
+}
+
+.orange-accent {
+  @apply text-orange-500;
+}
+
+/* Section backgrounds */
+.section-orange {
+  @apply bg-orange-500/5;
+}
+
+.section-green {
+  @apply bg-green-500/5;
+}
+
+/* Decorative elements */
+.color-dot {
+  @apply w-2 h-2 rounded-full bg-orange-500;
+}
+
+.color-line {
+  @apply h-1 w-12 bg-orange-500;
+}
+
+.color-box {
+  @apply p-4 bg-orange-500/10 rounded-lg;
+}
+
+/* Interactive elements */
+.hover-orange {
+  @apply transition-colors hover:text-orange-500;
+}
+
+.hover-green {
+  @apply transition-colors hover:text-green-500;
+}
+
+/* Accent borders */
+.accent-border-top {
+  @apply border-t-4 border-orange-500;
+}
+
+.accent-border-bottom {
+  @apply border-b-4 border-orange-500;
+}
+
+/* Background patterns */
+.pattern-dots {
+  @apply bg-[radial-gradient(circle_at_1px_1px,_var(--tw-gradient-stops))] from-orange-500/10 to-transparent bg-[length:20px_20px];
+}
+
+.pattern-lines {
+  @apply bg-[linear-gradient(45deg,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-green-500/5;
+}
