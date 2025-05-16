@@ -8,8 +8,7 @@ import Footer from "@/components/footer"
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  variable: "--font-inter"
 })
 
 const openSans = Open_Sans({
@@ -32,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${openSans.variable} font-sans`}>
+      <body suppressHydrationWarning={true} className={`${inter.variable} ${openSans.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <Navbar />

@@ -45,7 +45,7 @@ export default function Navbar() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/305collective.jpg" alt="305 Collective Logo" height={48} width={144} className="h-12 w-auto" />
+          <Image src="/305collective.jpg" alt="305 Collective Logo" height={56} width={168} className="h-14 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

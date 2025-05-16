@@ -17,10 +17,10 @@ export default function Home() {
               <div className="inline-block px-4 py-2 rounded-full bg-[#D96F32]/10 text-[#D96F32] text-sm font-medium mb-6">
                 Student-Led Consulting
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight text-[#D96F32]">
-                Strategic Solutions for <br /> Growing Businesses
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#D96F32]">
+                Elevate Your Business with Expert Consulting
               </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 305 Collective delivers professional consulting services to startups, small businesses, and student organizations.
                 Our student-led team combines academic excellence with practical expertise to drive measurable results.
               </p>
@@ -47,45 +47,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-32 bg-gradient-to-b from-white to-[#004B2D]/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-20">
-            <div className="inline-block px-4 py-2 rounded-full bg-[#004B2D]/10 text-[#004B2D] text-sm font-medium mb-6">
-              What We Offer
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#004B2D]">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive solutions tailored to your business needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <ServiceCard
-              title="Business Strategy"
-              description="Data-driven strategies and growth plans to help your business reach its full potential."
-              icon={BarChart}
-            />
-            <ServiceCard
-              title="Brand Development"
-              description="Strategic brand positioning and visual identity design to strengthen your market presence."
-              icon={Palette}
-            />
-            <ServiceCard
-              title="Digital Solutions"
-              description="Custom technology implementation and digital transformation services."
-              icon={Rocket}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us Section */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="flex flex-col items-center mb-6">
+              <Image src="/305collective.jpg" alt="305 Collective Logo" height={130} width={0} className="mb-4" />
+              <p className="text-lg text-gray-600">Empowering businesses with innovative solutions and expert guidance.</p>
+            </div>
             <div className="inline-block px-4 py-2 rounded-full bg-[#D96F32]/10 text-[#D96F32] text-sm font-medium mb-6">
               Why Choose Us
             </div>
