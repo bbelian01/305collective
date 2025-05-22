@@ -26,10 +26,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-https://www.305collectiveteam.com/
 
 DATABASE_URL="postgresql://postgres:MynameisBrandonBelian@db.mtpsnayhnnpnoasfvvox.supabase.co:5432/postgres"
 
-# NextAuth.js
+
 NEXTAUTH_URL="https://www.305collectiveteam.com/"
 NEXTAUTH_SECRET="305-collective-secret-key-2024"
