@@ -12,6 +12,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#F8F8F8] via-[#F5F5F5] to-[#E9F7F1] border-b-4 border-[#D96F32]">
         <div className="container mx-auto px-4 py-20 relative">
+          <div className="absolute top-4 right-4">
+            <Button asChild variant="outline" className="border-2 border-[#D96F32] text-[#D96F32] hover:bg-[#D96F32] hover:text-white">
+              <Link href="/login">Login</Link>
+            </Button>
+          </div>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-2xl">
               <div className="inline-block px-4 py-2 rounded-full bg-[#D96F32]/10 text-[#D96F32] text-sm font-medium mb-6">
